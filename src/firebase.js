@@ -11,8 +11,8 @@ const firebaseConfig = {
   measurementId: "G-QJHFLDBZM6"
 };
 
-// 初始化 Firebase
+// ...前面的 firebaseConfig 設定
 const app = initializeApp(firebaseConfig);
 
-// 導出資料庫實例供 App.vue 使用 (這行最重要！)
+// 關鍵：一定要有 export 才能讓 App.vue 讀取
 export const db = getFirestore(app);
